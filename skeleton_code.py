@@ -1,24 +1,30 @@
 import numpy as np
 
-
 def p1(k: int) -> str:
-    pass
+    lst = []
+    for i in range(k, 0, -1):
+        lst.append(np.math.factorial(i))
+
+    return lst
 
 
 def p2_a(x: list, y: list) -> list:
-    pass
-
+    y.sort(reverse=True)
+    y.pop(-1)
+    return y
 
 def p2_b(x: list, y: list) -> list:
-    pass
-
+    x.reverse()
+    return x
 
 def p2_c(x: list, y: list) -> list:
-    pass
+    lst = x + y
+    lst.sort()
+    return lst
 
 
 def p2_d(x: list, y: list) -> list:
-    pass
+    return [x, y]
 
 
 def p3_a(x: set, y: set, z: set) -> set:
@@ -79,30 +85,30 @@ if __name__ == '__main__':
     print(p2_c(x=[1, 3, 5, 7], y=[1, 2, 5, 6]))
     print(p2_d(x=[1, 3, 5, 7], y=[1, 2, 5, 6]))
     print('------------------------------')
-    print(p3_a(x={1, 3, 5, 7}, y={1, 2, 5, 6}, z={7, 8, 9, 1}))
-    print(p3_b(x={1, 3, 5, 7}, y={1, 2, 5, 6}, z={7, 8, 9, 1}))
-    print(p3_c(x={1, 3, 5, 7}, y={1, 2, 5, 6}, z={7, 8, 9, 1}))
-    print('------------------------------')
-    print(p4_a())
-    print(p4_b(p4_a()))
-    print('------------------------------')
-    graph = {
-        'A': ['D', 'E'],
-        'B': ['E', 'F'],
-        'C': ['E'],
-        'D': ['A', 'E'],
-        'E': ['A', 'B', 'C', 'D'],
-        'F': ['B'],
-        'G': []
-    }
-    print(p5_a(graph))
-    print(p5_b(graph))
-    print(p5_c(graph))
-    print(p5_d(graph))
-    print('------------------------------')
-    pq = PriorityQueue()
-    pq.push('apple')
-    pq.push('kiwi')
-    pq.push('orange')
-    while not pq.is_empty():
-        print(pq.pop())
+    # print(p3_a(x={1, 3, 5, 7}, y={1, 2, 5, 6}, z={7, 8, 9, 1}))
+    # print(p3_b(x={1, 3, 5, 7}, y={1, 2, 5, 6}, z={7, 8, 9, 1}))
+    # print(p3_c(x={1, 3, 5, 7}, y={1, 2, 5, 6}, z={7, 8, 9, 1}))
+    # print('------------------------------')
+    # print(p4_a())
+    # print(p4_b(p4_a()))
+    # print('------------------------------')
+    # graph = {
+    #     'A': ['D', 'E'],
+    #     'B': ['E', 'F'],
+    #     'C': ['E'],
+    #     'D': ['A', 'E'],
+    #     'E': ['A', 'B', 'C', 'D'],
+    #     'F': ['B'],
+    #     'G': []
+    # }
+    # print(p5_a(graph))
+    # print(p5_b(graph))
+    # print(p5_c(graph))
+    # print(p5_d(graph))
+    # print('------------------------------')
+    # pq = PriorityQueue()
+    # pq.push('apple')
+    # pq.push('kiwi')
+    # pq.push('orange')
+    # while not pq.is_empty():
+    #     print(pq.pop())
